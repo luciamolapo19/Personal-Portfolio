@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* Internal CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: #c94949dc;
+            color: rgb(19, 25, 112);
+            padding: 1em 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+       }
+
+        nav ul li {
+            margin: 0 1em;
+        }
+
+        nav ul li a {
+            color: navy;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 2em;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        #projects .project {
+            border: 1px solid rgb(19, 25, 112);
+            padding: 1em;
+            margin-bottom: 1em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background: #c94949dc;
+            color: navy;
+            position: fixed;
+            bottom: 0;
+            width: 100%
+            z-index: 100; /* Ensure footer stays on top */
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 0.5em 0;
+            }
+        }
+
+
+        /* Additional CSS */
+        #contact {
+            padding: 2em;
+            background-color: #f9f9f9;
+            max-width: 800px;
+            margin: auto;
+            margin-bottom: 4em; /* Increase margin-bottom to create space */
+        }
+        /* Optionally, adjust the padding-bottom of the contact section */
+        /* #contact {
+            padding-bottom: 4em; 
+        } */
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="about">
+        <h1>About Me</h1>
+        <p>Welcome to my portfolio website, I am Lucia Molapo a multifaceted professional specializing in web development and digital marketing. With a solid foundation in creating dynamic, user-friendly web applications, I bring a blend of technical prowess and creative insight to every project.
+
+            My journey in web development began with mastering the essentials—HTML, CSS, and Github and expanded into advanced frameworks like Node.js. This technical expertise allows me to build robust, scalable, and visually appealing websites tailored to client needs.
+            
+            In addition to my technical skills, I have a deep passion for digital marketing. I specialize in SEO optimization, content creation, and social media management. My ability to craft compelling digital strategies helps businesses enhance their online presence, engage their audience, and drive growth.
+            
+            I pride myself on my problem-solving abilities, attention to detail, and dedication to continuous learning. Whether coding a complex application or devising a marketing campaign, I approach each task with creativity and a results-oriented mindset.
+            
+            Outside of work, I enjoy exploring the latest tech trends, writing insightful blog posts, and connecting with like-minded professionals in the industry. My goal is to leverage my skills and knowledge to create meaningful digital experiences that make a difference.
+            
+            Feel free to reach out to discuss how I can contribute to your next project.</p>
+    </section>
+    <section id="projects">
+        <h1>Projects</h1>
+        <div class="project">
+            <h2>Personal Portfolio Website</h2>
+            <p>The Personal Portfolio Website is a responsive and visually appealing web application designed to showcase my professional skills, projects, and contact information. This website serves as an online resume and portfolio, providing potential employers and collaborators with a comprehensive overview of my work and capabilities.</p>
+        </div>
+    </section>
+    <section id="skills">
+        <h1>Skills</h1>
+        <ul>
+            <li>HTML5</li>
+            <li>Github</li>
+            <li>CSS3 </li>
+            <li>Search Engine optimization</li>
+            <li>Node js</li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h1>Contact</h1>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form> 
+    </section>
+    <script>
+        // Internal JavaScript
+        document.querySelector('form').addEventListener('submit', function(event) {
+            const name = document.querySelector('#name').value;
+            const email = document.querySelector('#email').value;
+            const message = document.querySelector('#message').value;
+
+            if (!name || !email || !message) {
+                alert('Please fill out all fields.');
+                event.preventDefault();
+            }
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio</p>
+    </footer>
+</body>
+</html>
